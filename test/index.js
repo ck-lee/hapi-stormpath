@@ -17,7 +17,7 @@ var it = lab.it;
 var expect = Code.expect;
 
 
-it('errors without API Key', function (done) {
+it('starts a server without error', function (done) {
 
     var server = new Hapi.Server();
     server.register([{
@@ -30,5 +30,6 @@ it('errors without API Key', function (done) {
     function (err) {
 
         expect(err).to.not.exist();
+        done();
     });
 });
