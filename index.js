@@ -48,6 +48,6 @@ exports.register = function (server, options, next) {
 };
 
 exports.register.attributes = {
-    name: 'hapiStormpath',
-    version: '0.0.1'
+    pkg: require('./package.json'),
+    name: 'hapiStormpath'
 };

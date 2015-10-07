@@ -31,6 +31,7 @@ it('starts a server without error', function (done) {
     function (err) {
 
         expect(err).to.not.exist();
+        expect(server.plugins.hapiStormpath.client).to.exist();
         done();
     });
 });
