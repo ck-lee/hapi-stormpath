@@ -8,7 +8,8 @@ var Lab = require('lab');
 // Declare internals
 
 var internals = {};
-
+internals.apiKeyId = 'test';
+internals.apiKeySecret = 'test';
 
 // Test shortcuts
 
@@ -23,8 +24,8 @@ it('starts a server without error', function (done) {
     server.register([{
         register: require('../'),
         options:  {
-            apiKeyId: 'test',
-            apiKeySecret: 'test'
+            apiKeyId: internals.apiKeyId,
+            apiKeySecret: internals.apiKeySecret
         }
     }],
     function (err) {
