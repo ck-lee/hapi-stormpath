@@ -1,0 +1,37 @@
+{
+  "name": "hapi-stormpath",
+  "version": "0.0.1",
+  "description": "Stormpath plugin for hapi.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "lab -t 100 -a code -L"
+  },
+  "keywords": [
+    "hapi",
+    "plugin",
+    "stormpath"
+  ],
+  "dependencies": {
+    "boom": "2.x.x",
+    "hoek": "2.x.x",
+    "stormpath": "^0.12.2"
+  },
+  "peerDependencies": {
+    "hapi": ">=8.x.x"
+  },
+  "devDependencies": {
+    "code": "1.x.x",
+    "hapi": "9.x.x",
+    "lab": "6.x.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ck-lee/hapi-stormpath.git"
+  },
+  "author": "CK Lee",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ck-lee/hapi-stormpath/issues"
+  },
+  "homepage": "https://github.com/ck-lee/hapi-stormpath"
+}
