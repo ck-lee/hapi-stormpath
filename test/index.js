@@ -10,6 +10,7 @@ var Lab = require('lab');
 var internals = {};
 internals.apiKeyId = 'test';
 internals.apiKeySecret = 'test';
+internals.applicationHref = 'test';
 
 // Test shortcuts
 
@@ -32,6 +33,24 @@ it('starts a server without applicationHref', function (done) {
 
         expect(err).to.not.exist();
         expect(server.plugins.hapiStormpath.client).to.exist();
+        done();
+    });
+});
+
+it('errors a server with applicationHref and invalid apiKey', function (done) {
+
+    var server = new Hapi.Server();
+    server.register([{
+        register: require('../'),
+        options:  {
+            apiKeyId: internals.apiKeyId,
+            apiKeySecret: internals.apiKeySecret,
+            applicationHref: internals.applicationHref
+        }
+    }],
+    function (err) {
+
+        expect(err).to.exist();
         done();
     });
 });
