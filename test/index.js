@@ -18,7 +18,7 @@ var it = lab.it;
 var expect = Code.expect;
 
 
-it('starts a server without error', function (done) {
+it('starts a server without applicationHref', function (done) {
 
     var server = new Hapi.Server();
     server.register([{
