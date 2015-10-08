@@ -6,7 +6,7 @@ A simple wrapper plugin for hapi.js to integrate with [Stormpath](https://stormp
 [![devDependency Status](https://david-dm.org/ck-lee/hapi-stormpath/dev-status.svg)](https://david-dm.org/ck-lee/hapi-stormpath#info=devDependencies)
 
 ## Example to register plugin 
-See the [Stormpath client](http://docs.stormpath.com/nodejs/api/client#ctor) for more information
+See [Stormpath client](http://docs.stormpath.com/nodejs/api/client#ctor) for more information
 ```javascript
 var server = new Hapi.Server();
 server.register([{
@@ -21,7 +21,7 @@ server.register([{
 ```
 
 ## Example to use Stormpath API in a route handler
-See the [Stormpath api](http://docs.stormpath.com/nodejs/api/) for more information
+See [Stormpath api](http://docs.stormpath.com/nodejs/api/) for more information
 ```javascript
 server.plugins.hapiStormpath.application.authenticateAccount(request.payload, function onAuthcResult(err, result) {
 
