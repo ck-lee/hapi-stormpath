@@ -24,7 +24,7 @@ exports.register = function (server, options, next) {
 
         client.getApplication(options.applicationHref, function (err, application) {
 
-            Hoek.assert(!err, err.developerMessage);
+            Hoek.assert(!err, 'Error occurred on stormpath client.getApplication()');
 
             var authenticator = new stormpath.OAuthAuthenticator(application);
 
