@@ -31,7 +31,12 @@ describe('when stormpath client is valid', function () {
             register: require('../'),
             options: {
                 apiKeyId: internals.apiKeyId,
-                apiKeySecret: internals.apiKeySecret
+                apiKeySecret: internals.apiKeySecret,
+                cacheOptions: {
+                    store: 'memory',
+                    ttl: 300,
+                    tti: 300
+                }
             }
         }],
             function (err) {
